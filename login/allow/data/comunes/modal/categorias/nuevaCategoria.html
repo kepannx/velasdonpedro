@@ -1,0 +1,71 @@
+<div class="modal fade modalCategoria" tabindex="-1" role="dialog" aria-labelledby="modalCategoria" aria-hidden="true" style="display: none;">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="modalCategoria"> <i class="fa fa-file"></i> Crear Nueva Categoría/SubCategoria</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="col-md-12">
+                      
+  
+                     <div class="col-md-3" id="tiposCategoria">
+                          <div class="form-group">
+                                <label>Tipo</label>
+                                  <select id="tipo" class="form-control">
+                                    <option value="categoria">Categoría</option>
+                                    <option value="subCategoria">SubCategoria</option>
+                                  </select>
+                              <div class="help-block with-errors"></div>
+                            </div>
+                      </div>
+
+                      <!-- HERE SUBCATEGORIAS -->
+
+                      <div class="col-md-2">
+                        <div class="form-group">
+                          <div id="cargarSubCategorias"></div>
+                        </div>
+                      </div>
+                      <!-- FIN DE LAS SUBCATEGORIAS -->
+
+                      <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Cómo lo Llamarás?</label>
+                            <div class="input-group" id="productosServicios">
+                              <div class="input-group-addon">
+                                <i class="fa fa-fort-awesome"></i>
+                              </div>
+                              <input type="text" class="form-control" id="nombreCategoria" placeholder="Cómo piensas llamarlo" required>
+                            </div>
+                        </div>  
+                      </div>
+                     
+                      <div class="col-md-3"  id='tope'>
+                        <div class="form-group">
+                            <label><a class="mytooltip" href="javascript:void(0)" style="color:#686868">Aplicar Tope<span class="tooltip-content5"><span class="popover"><span class="tooltip-inner2">El tope significa que cualquier producto en esta categoría/subCategoria no le aplicará el IVA hasta que se sea mayor o igual al valor tope</span></span></span></a></label>
+                            <div class="input-group">
+                            <input type="checkbox"   id="aplicaTopeImpuesto" class="js-switch"  data-color="#073c69" data-size="large"/>     
+                            </div>
+                        </div>
+                      </div>
+
+                      <!-- Valor del tope -->
+                      <div id="valorTope"></div>
+                      <!-- fin del tope-->
+
+                    </div>
+
+                  </div>
+                  <div class="modal-footer">
+
+                    <button type="button" id="guardarCategoria" class="btn btn-success col-md-12 waves-effect text-right" > <i class="fa fa-save"></i> Guardar La <span id="name">Categoria</span></button>
+
+
+                    
+                  </div>
+                </div>
+                <!-- /.modal-content -->
+              </div>
+              <!-- /.modal-dialog -->
+            </div>

@@ -1,0 +1,21 @@
+@media print { #noPrint {     display:none; } }
+#crearAsociado > div.wizard-content > div.wizard-pane.active > div > div > div > small {
+    margin-left: 26%;
+}
+#my_photo_booth {
+    margin: 0 auto;
+    width: 240px;
+}
+#pre_take_buttons > button
+,#post_take_buttons > button:nth-child(1) {
+    margin: 0 auto 10px auto;
+}
+#post_take_buttons > button:nth-child(2) {
+    margin: 0 auto;
+}
+#results > img {
+    width: 240px;
+}
+
+
+

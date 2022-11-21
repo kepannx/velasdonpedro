@@ -1,0 +1,44 @@
+<!-- sample modal content -->
+                                <div class="modal fade pre-serializacion" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel1" aria-hidden="true" style="display: none;">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="myLargeModalLabel">Agrega Los Seriales O Imeis De Este Producto</h4>
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <div class="col-md-4">
+                                                    <h4><div id="perfilProducto"></div></h4>
+                                                    <div class="col-md-12">
+                                                        <input type="text" id="codeAdd" class="form-control" placeholder="dame el serial o codigo"  onchange ="nuevoFocus(this)" autofocus="" >
+                                                    </div>
+
+
+                                                    <div class="col-md-12">
+                                                        <div class="col-md-4">
+                                                            Serial: <input type="radio" name="tipo" id="serial" checked="">
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            Imei: <input type="radio" name="tipo" id="imei">
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            Otro: <input type="radio" name="tipo" id="otro">
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                                <div class="col-md-8" id="listaSerialesImeis">
+                                                    
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger waves-effect text-left" id="addSeriales" data-dismiss="modal">Agregar</button>
+                                            </div>
+                                        </div>
+                                        <!-- /.modal-content -->
+                                    </div>
+                                    <!-- /.modal-dialog -->

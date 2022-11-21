@@ -1,0 +1,41 @@
+<div id="uploadDocumentacionPuntoVenta" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" align="center"> <i class="fa fa-warning"></i> Subir Documentos Del Punto de Venta </h4>
+                    <p align="center">Los Documentos Que Subas Aquí Se Relacionarán Con Este Punto de Venta. </p>
+                  </div>
+                  <div class="modal-body">
+                     <form action="../../data/ajax/acciones/uploadArchivos.php" method="post" enctype="multipart/form-data" id="MyUploadForm">
+
+                          <div class="col-md-6">
+                          <input name="FileInput" id="FileInput" type="file" class="dropify" data-show-remove="false" />
+                          
+                          </div>
+
+                          <div class="col-md-6">
+                            <label>Cómo llamarás al archivo?</label>
+                            <input type="text" name="nombreArchivo" class="form-control" placeholder="Dime con que nombre quieres identificarlo">
+
+                             <button type="submit" id="submit-btn" class="btn btn-success waves-effect waves-light col-md-12"  style="margin-top: 20px; height: 100px;"><i class="fa fa-upload"></i> Súbeme Este Archivo</button>
+                          </div>
+                          <div class="col-md-12" align="center">
+                            <div id="progressbox" >
+                                <div id="progressbar"></div >
+                                <div id="statustxt">0%</div>
+                            </div>
+                            <div id="output"></div>
+                          </div>
+  
+                  </div>
+                  <div class="modal-footer">
+                   
+                  </div>
+                  </form>
+
+                <!-- Fin del formulario -->
+                  </form>
+                </div>
+              </div>
+            </div>
