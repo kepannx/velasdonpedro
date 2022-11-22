@@ -140,21 +140,22 @@ $objPHPExcel->setActiveSheetIndex(0);
 
 
 $cn = mysql_connect ("localhost","bWDigital","DYFUNszt4yX5frmS") or die ("ERROR EN LA CONEXION");
-$db = mysql_select_db ("billware_digital",$cn) or die ("ERROR AL CONECTAR A LA BD");
+$db = mysql_select_db ("billware_velas",$cn) or die ("ERROR AL CONECTAR A LA BD");
 
 
         // Llenamos el arreglo con los datos  del archivo xlsx
 for ($i=2;$i<=2000;$i++){
  $_DATOS_EXCEL[$i]['sku'] = $objPHPExcel->getActiveSheet()->getCell('A'.$i)->getCalculatedValue();
  $_DATOS_EXCEL[$i]['nombreProductosServicios'] = $objPHPExcel->getActiveSheet()->getCell('B'.$i)->getCalculatedValue();
-  $_DATOS_EXCEL[$i]['costoUnitario'] = $objPHPExcel->getActiveSheet()->getCell('C'.$i)->getCalculatedValue();
-  $_DATOS_EXCEL[$i]['cantidades'] = $objPHPExcel->getActiveSheet()->getCell('D'.$i)->getCalculatedValue();
+  $_DATOS_EXCEL[$i]['costoUnitario'] = $objPHPExcel->getActiveSheet()->getCell('D'.$i)->getCalculatedValue();
+  $_DATOS_EXCEL[$i]['cantidades'] = $objPHPExcel->getActiveSheet()->getCell('C'.$i)->getCalculatedValue();
 
   //$_DATOS_EXCEL[$i]['costoTotal'] = $objPHPExcel->getActiveSheet()->getCell('E'.$i)->getCalculatedValue();
   $_DATOS_EXCEL[$i]['precioVenta'] = $objPHPExcel->getActiveSheet()->getCell('E'.$i)->getCalculatedValue();
+  $_DATOS_EXCEL[$i]['ventas_al_por_mayor'] = $objPHPExcel->getActiveSheet()->getCell('G'.$i)->getCalculatedValue();
 
 }   
-}
+} 
 //si por algo no cargo el archivo bak_ 
 else{echo "Necesitas primero importar el archivo";}
 $errores=0;
@@ -174,23 +175,32 @@ foreach($_DATOS_EXCEL as $campo => $valor){
 
     }else{//si el sku no esta repetido entonces insertemelo
 
-       $sql="INSERT INTO productosServicios SET 
+        $sql="INSERT INTO PRODUCTOSERVICIOS SET 
         sku='".$sku."', 
         nombreProductosServicios='".$consultaComun->filtroStrings($valor['nombreProductosServicios'],1)."', 
         tipoProductoServicio='producto',
+
         valorVentaUnidad='".$consultaComun->normalizacionDeCaracteres($consultaComun->filtroNumerico($valor['precioVenta']))."',
-        valorVentaPorMayor=0,
+
+        valorVentaPorMayor='".$consultaComun->normalizacionDeCaracteres($consultaComun->filtroNumerico($valor['ventas_al_por_mayor']))."',
+
         impuesto=0,
+        serializacion='no',
+        serial='no',
+        imei='no',
         cantidadMinimaPuntos=1,
-        retiroTemporal='si'";
+        retiroTemporal='si'
+        ";
         $query= mysql_query($sql);
         $idProducto=mysql_insert_id();
 
+        echo '<br>hola <br>';
+
      }  //Fin ver si el producto existe
 
-    //Ingresar al inventario
 
-     $sql="INSERT INTO inventario SET idProvedor=NULL, IdFacturaProvedor=NULL,
+    //Ingresar al inventario
+        $sql="INSERT INTO INVENTARIOS SET idProvedor=0, IdFacturaProvedor=0,
                         idProductoServicio='".$idProducto."',
                         fechaIngreso='".date('Y-m-d')."',
                         valorUnidad='".$valor['costoUnitario']."',
@@ -216,6 +226,8 @@ foreach($_DATOS_EXCEL as $campo => $valor){
         ";
 
       $query= mysql_query($sqlRepartir);
+
+     
 
 
   }

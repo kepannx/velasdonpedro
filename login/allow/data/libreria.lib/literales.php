@@ -9,9 +9,9 @@ define("telefonoSoporte", '3167386129');
 define("emailSoporte", "codream@outlook.es");
 define(piePaginaFacturas, "BillWare Facturación Punto de Venta | Power By codream.co © ".date("Y"));
 
-define('PATH', "http://".$_SERVER['HTTP_HOST']."/billware/login/allow/");
+define('PATH', "http://".$_SERVER['HTTP_HOST']."/donpedro/login/allow/");
 
-define('BASEPATH', "http://".$_SERVER['HTTP_HOST']."/billware/");
+define('BASEPATH', "http://".$_SERVER['HTTP_HOST']."/donpedro/");
 //Datos Aplicacion
 define(fechaActual, strtotime("now"));
 define(fechaActualFija, strtotime(date("d-m-Y")));

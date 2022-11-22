@@ -12,7 +12,7 @@ public function conectar()
 		$servername = "localhost";
 		$username   = "bWDigital"; 
 		$password   = "DYFUNszt4yX5frmS";
-		$dbname     = "billware_digital";
+		$dbname     = "billware_velas";
 		return $conn = new mysqli($servername, $username, $password, $dbname);
 
 }

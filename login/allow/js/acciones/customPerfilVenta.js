@@ -71,29 +71,29 @@ $('#fechas').on('change', function() {
 		if (typeof(typeof($('fechas').value==undefined))) {
 			$.post('../../data/ajax/acciones/calculoValorEfectivo.php', { }, function(datosTabla) {
 			 		var totalEfectivo=datosTabla;
-			    $('#totalEfectivo').html(totalEfectivo);
+			    $('#totalEfectivo').html('$'+totalEfectivo);
 			  });
 
 			$.post('../../data/ajax/acciones/calculoValorTransacciones.php', { }, function(datosTabla) {
 			 		var totalTransacciones=datosTabla;
-			    $('#totalTransacciones').html(totalTransacciones);
+			    $('#totalTransacciones').html('$ '+totalTransacciones);
 			  });
 
 
 			$.post('../../data/ajax/acciones/calculoValorEgresos.php', { }, function(datosTabla) {
 			 		var totalTransacciones=datosTabla;
-			    $('#totalEgresos').html(totalTransacciones);
+			    $('#totalEgresos').html('$ '+totalTransacciones);
 			  });
 
 
 
 			$.post('../../data/ajax/acciones/calculoCuentasPorCobrar.php', { }, function(datosTabla) {
-			 		$('#cxc').html(datosTabla);
+			 		$('#cxc').html('$ '+datosTabla);
 			  });
 
 			//Calculo El Gran Total
 			$.post('../../data/ajax/acciones/calculoValorGranTotal.php', { }, function(datosTabla) {
-			 		$('#granTotal').html(datosTabla);
+			 		$('#granTotal').html('$ '+datosTabla);
 			  });
 
 /*

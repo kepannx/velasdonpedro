@@ -140,7 +140,7 @@ $objPHPExcel->setActiveSheetIndex(0);
 
 
 $cn = mysql_connect ("localhost","bWDigital","DYFUNszt4yX5frmS") or die ("ERROR EN LA CONEXION");
-$db = mysql_select_db ("billware_digital",$cn) or die ("ERROR AL CONECTAR A LA BD");
+$db = mysql_select_db ("billware_velas",$cn) or die ("ERROR AL CONECTAR A LA BD");
 
 
         // Llenamos el arreglo con los datos  del archivo xlsx

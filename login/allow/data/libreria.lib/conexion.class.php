@@ -15,7 +15,7 @@ class conectar
 		$this->nombre ="localhost";
 		$this->usuario= "bWDigital"; //SuperAdministrador
 		$this->pass ="DYFUNszt4yX5frmS";
-		$this->base = "billware_digital";
+		$this->base = "billware_velas";
 		
 		
 		}
@@ -192,7 +192,7 @@ public function checkNumeroUsuarios(){
 }
 define(key, "SpufraK3858EpechUkU4rajAjuWrapRapH3hep6desebrekeb2crux6c87hEsA3rned4EwredRaPr2B7t5ekega2a73xupen");
 define(publickey, "5663284166397124291158310398993993");
-define(url, "billware/");
+define(url, "donpedro/");
 
 
 ?>

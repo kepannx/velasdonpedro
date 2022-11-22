@@ -151,7 +151,7 @@ require_once '../../data/comunes/headercode.php' ;
                            
                             <div class="col-xs-12 col-sm-12 col-md-12 btn btn-default">
                               
-                               <h5>Gran Total</h5>
+                               <h5>En Caja</h5>
                               <h2><i class="fa fa-star"></i><div id="granTotal"></div></h2>
                             </div>
 

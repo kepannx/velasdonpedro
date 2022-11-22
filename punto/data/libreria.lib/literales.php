@@ -11,9 +11,9 @@ define(piePaginaFacturas, "BillWare Sistema Registro OnLine | Power By codream.c
 define('ciudadDefecto', 'Medellín');
 define('dptoDefecto', 'Antioquia');
 //define('PATH', "http://".$_SERVER['HTTP_HOST']."/bw/versiones/beta20/app/cSuperAdmin/");
-define('PATH', "http://".$_SERVER['HTTP_HOST']."/billware/punto/");
+define('PATH', "http://".$_SERVER['HTTP_HOST']."/donpedro/punto/");
 
-define('BASEPATH', "http://".$_SERVER['HTTP_HOST']."/billware/");
+define('BASEPATH', "http://".$_SERVER['HTTP_HOST']."/donpedro/");
 
 //Datos Aplicacion
 define(fechaActual, strtotime("now"));
