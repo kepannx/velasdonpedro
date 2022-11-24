@@ -475,15 +475,15 @@ public function datosCategoria($parametro, $vector){
 //Load Select Categorias
 public function loadSelectCategorias($tipo, $padre){
 
-
       $conn=$this->conectar();
 
       echo '<div class="form-group">
               <label>Pertenece A:</label>
               <select id="padre" class="form-control">
       ';
-      if($tipo =='categoria'){
-         $sql="SELECT idCategoria, tipo, nombreCategoria FROM  categorias WHERE padre = $padre ORDER BY nombreCategoria ASC";
+      if($tipo ==='categoria'){
+
+          $sql="SELECT idCategoria, tipo, nombreCategoria FROM  categorias WHERE padre = 0 ORDER BY nombreCategoria ASC";
         }
       else if($tipo =='subCategoria'){
           $sql="SELECT idCategoria, tipo, nombreCategoria FROM  categorias WHERE tipo='categoria' ORDER BY nombreCategoria ASC";

@@ -64,9 +64,6 @@
       <br><br>
       <button type="button" id="addArticulo" class="btn btn-info" > <i class="fa fa-plus-circle"></i> Agregar A La Factura </button>
     </div>
-
-
-
   </div>
 
 
